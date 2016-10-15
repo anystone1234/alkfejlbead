@@ -11,25 +11,25 @@ Az órákra való jelentkezés, illetve saját óra meghirdetése regisztráció
 
 * Vendég:
 
-..* Hirdetések böngészése
+  * Hirdetések böngészése
 
-..* Hirdetések leírásának megtekintése
+  * Hirdetések leírásának megtekintése
 
-..* Keresés
+  * Keresés
 
-..* Regisztrálás
+  * Regisztrálás
 
 * Felhasználó:
 
   * Bejelentketés
 
-..*Adatok szerkesztése
+  * Adatok szerkesztése
 
-..*Hirdetés feladása
+  *Hirdetés feladása
 
-..*Saját hirdetés módosítása, törlése
+  * Saját hirdetés módosítása, törlése
 
-..*Kurzus jelentkezés, jelentkezés törlése
+  * Kurzus jelentkezés, jelentkezés törlése
 
 ####**1.3. Nem funkcionális követelmények**
 
@@ -39,14 +39,14 @@ Az órákra való jelentkezés, illetve saját óra meghirdetése regisztráció
 
 ####**1.4. Szakterületi fogalomjegyzék**
 
-+*Oktatás*: ismeretek elsajátítása, a műveltség megszerzése, intellektuális képességek kialakítása és fejlesztése
-+*Kurzus*: tanulmányok tervezett sorozata
-+*Korrepetáció*: valamilyen tananyagból előkészítő, begyakoroltató, tanulásban segítő folyamat
-+*Hirdetés*: információkat adó leirás egy termékről vagy szolgáltatásról
++ *Oktatás*: ismeretek elsajátítása, a műveltség megszerzése, intellektuális képességek kialakítása és fejlesztése
++ *Kurzus*: tanulmányok tervezett sorozata
++ *Korrepetáció*: valamilyen tananyagból előkészítő, begyakoroltató, tanulásban segítő folyamat
++ *Hirdetés*: információkat adó leirás egy termékről vagy szolgáltatásról
 
 ####**1.5. Szerepkörök**
 
-+Vendég: hirdetések keresését, böngészését, megtekintését végezheti
-+Felhasználó: a *Vendég* szerepkörén túl saját hirdetések kezelésére és hirdetésekre való jelentkezésre képes
++ Vendég: hirdetések keresését, böngészését, megtekintését végezheti
++ Felhasználó: a *Vendég* szerepkörén túl saját hirdetések kezelésére és hirdetésekre való jelentkezésre képes
 
 ####**1.6. Használati-eset modell**
