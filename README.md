@@ -40,5 +40,10 @@ Az órákra való jelentkezés, illetve saját óra meghirdetése regisztráció
 + Vendég: hirdetések keresését, böngészését, megtekintését végezheti
 + Felhasználó: a *Vendég* szerepkörén túl saját hirdetések kezelésére és hirdetésekre való jelentkezésre képes
 
-####**1.6. Használati-eset modell**
-![Szerepkörök](kepek/usecase.png)
+####**1.6. Használati-eset model**
+![](kepek/usecase.png)
+
+####**1.7. Folyamat eset model**
+
+Az alábbi ábra azt a folyamatot reprezentálja, mikor a már regisztrált felhasználó új hirdetést ad fel. Ilyenkor ellenőrzéshez van kötve a hirdetés, hogy az megfelelő-e vagy sem. Amennyiben az nem megfelelő, új hirdetést kell feladni.
+![](kepek/folyamat.png)
