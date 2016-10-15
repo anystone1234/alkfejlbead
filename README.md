@@ -9,7 +9,7 @@ Az órákra való jelentkezés, illetve saját óra meghirdetése regisztráció
 
 **1.2. Funkcionális követelmények**
 
- *Vendég:
+..*Vendég:
   *Hirdetések böngészése
   *Hirdetések leírásának megtekintése
   *Keresés
