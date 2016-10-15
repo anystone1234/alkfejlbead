@@ -41,3 +41,4 @@ Az órákra való jelentkezés, illetve saját óra meghirdetése regisztráció
 + Felhasználó: a *Vendég* szerepkörén túl saját hirdetések kezelésére és hirdetésekre való jelentkezésre képes
 
 ####**1.6. Használati-eset modell**
+![Szerepkörök](kepek/usecase.png)
