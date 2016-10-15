@@ -9,19 +9,19 @@ Az órákra való jelentkezés, illetve saját óra meghirdetése regisztráció
 
 ####**1.2. Funkcionális követelmények**
 
-*Vendég:
+* Vendég:
 
-..*Hirdetések böngészése
+..* Hirdetések böngészése
 
-..*Hirdetések leírásának megtekintése
+..* Hirdetések leírásának megtekintése
 
-..*Keresés
+..* Keresés
 
-..*Regisztrálás
+..* Regisztrálás
 
-*Felhasználó:
+* Felhasználó:
 
-..*Bejelentketés
+  * Bejelentketés
 
 ..*Adatok szerkesztése
 
@@ -33,9 +33,9 @@ Az órákra való jelentkezés, illetve saját óra meghirdetése regisztráció
 
 ####**1.3. Nem funkcionális követelmények**
 
-+Felhasználóbarát: áttekinthetőség - kategóriánkénti rendezés
-+Biztonság: jelszóval védett tartalom - jelszavak tárolása - korlátozott hozzáférés
-+Karbantarthatóság: bővíthető/szűkíthető szerkezet - logikus elrendezés
++ Felhasználóbarát: áttekinthetőség - kategóriánkénti rendezés
++ Biztonság: jelszóval védett tartalom - jelszavak tárolása - korlátozott hozzáférés
++ Karbantarthatóság: bővíthető/szűkíthető szerkezet - logikus elrendezés
 
 ####**1.4. Szakterületi fogalomjegyzék**
 
