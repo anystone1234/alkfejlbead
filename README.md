@@ -12,23 +12,16 @@ Az órákra való jelentkezés, illetve saját óra meghirdetése regisztráció
 * Vendég:
 
   * Hirdetések böngészése
-
   * Hirdetések leírásának megtekintése
-
   * Keresés
-
   * Regisztrálás
 
 * Felhasználó:
 
   * Bejelentketés
-
   * Adatok szerkesztése
-
-  *Hirdetés feladása
-
+  * Hirdetés feladása
   * Saját hirdetés módosítása, törlése
-
   * Kurzus jelentkezés, jelentkezés törlése
 
 ####**1.3. Nem funkcionális követelmények**
