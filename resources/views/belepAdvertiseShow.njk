@@ -1,0 +1,33 @@
+{% extends "belepett" %}
+
+{% block content %}
+<h2>{{ advertise.name }}</h2>
+<p>{{ advertise.category.name }}</p>
+<h3>Leírás</h3>
+<pre>
+{{ advertise.describing }}
+</pre>
+<h3>Óradíj</h3>
+<pre>
+{{ advertise.price }}
+</pre>
+<h3>Kontakt adtatok:</h3>
+<h5>- E-mail:</h5>
+<pre>
+{{ advertise.email }}
+</pre>
+<h5>- Telefonszám:</h5>
+<pre>
+{{ advertise.phone }}
+</pre>
+
+{% if (advertise.user_id == currentUser.id) %}
+<a href="/belepett/{{ advertise.id }}/mod" class="btn btn-default">
+    Szerkeszt
+</a>
+<a href="/belepett/{{ advertise.id }}/delete" class="btn btn-danger">
+    Töröl
+</a>
+{% endif %}
+
+{% endblock %}

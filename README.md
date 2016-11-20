@@ -47,3 +47,10 @@ Az órákra való jelentkezés, illetve saját óra meghirdetése regisztráció
 
 Az alábbi ábra azt a folyamatot reprezentálja, mikor a már regisztrált felhasználó új hirdetést ad fel. Ilyenkor ellenőrzéshez van kötve a hirdetés, hogy az megfelelő-e vagy sem. Amennyiben az nem megfelelő, új hirdetést kell feladni.
 ![](kepek/folyamat.png)
+
+# 2. Beadandó - 2. Alkalmazás elkészítése szerveroldali technológiával
+---
+###**2. Tervezés**
+
+####**2.1. Oldaltérkép**
+

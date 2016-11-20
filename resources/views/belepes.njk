@@ -1,0 +1,25 @@
+{% extends "belepett" %}
+
+{% block content %}
+
+<div class="row">
+
+  {% for category in categories %}
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">{{ category.name }}</div>
+      <ul class="list-group">
+        {% for advertise in category.topAdvertises %}
+        <li class="list-group-item">
+          <a href="/belepett/advertises/{{ advertise.id }}">
+            {{ advertise.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+{% endblock %}
