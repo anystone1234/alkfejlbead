@@ -53,7 +53,7 @@ Az alábbi ábra azt a folyamatot reprezentálja, mikor a már regisztrált felh
 
 ####**2.1. Architektúra terv**
 
-####**2.1.1. Oldaltérkép
+####**2.1.1. Oldaltérkép**
 
 **Publikus**
 
