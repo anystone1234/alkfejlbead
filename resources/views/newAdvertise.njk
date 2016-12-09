@@ -1,5 +1,9 @@
 {% extends "belepett" %}
 
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+{% endblock %}
+
 {% block content %}
 <h2>Új hirdetés</h2>
 
@@ -19,41 +23,53 @@
 {% endif %}
 
 
-<form class="form-horizontal" method="post">
+<form class="form-horizontal" method="post" data-toggle="validator">
 
   {{ csrfField }}
 
-  <div class="form-group">
+  <div class="form-group has-feedback">
     <label for="name" class="col-lg-2 control-label">Hirdetés neve</label>
     <div class="col-lg-10">
-      <input type="text" class="form-control" id="name" name="name" placeholder="Hirdetés neve" value="{{old('name')}}">
+      <input required type="text" class="form-control" id="name" name="name" placeholder="Hirdetés neve" value="{{old('name')}}">
+      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+      <div class="help-block with-errors"></div>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group has-feedback">
     <label for="describing" class="col-lg-2 control-label">Leírás</label>
     <div class="col-lg-10">
-      <textarea class="form-control" rows="3" id="describing" name="describing">{{old('describing')}}</textarea>
+      <textarea required class="form-control" rows="3" id="describing" name="describing" placeholder="Leírás">{{old('describing')}}</textarea>
+      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+      <div class="help-block with-errors"></div>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group has-feedback">
     <label for="price" class="col-lg-2 control-label">Óradíj</label>
     <div class="col-lg-10">
-      <textarea class="form-control" rows="3" id="price" name="price">{{old('price')}}</textarea>
+      <textarea required class="form-control" rows="3" id="price" name="price" placeholder="Óradíj">{{old('price')}}</textarea>
+      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+      <div class="help-block with-errors"></div>
     </div>
   </div>
-<div class="form-group">
+<div class="form-group has-feedback">
     <label for="kontakt" class="col-lg-2 control-label">Kontakt adatok</label>
     <div class="col-lg-10">
         <label for="category_id">E-mail cím</label>
-        <textarea class="form-control" rows="3" id="email" name="email">{{old('email')}}</textarea>
+        <textarea required class="form-control" rows="3" id="email" name="email" placeholder="E-mail cím">{{old('email')}}</textarea>
+        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+       <div class="help-block with-errors"></div>
         <label for="category_id">Telefonszám</label>
-      <textarea class="form-control" rows="3" id="phone" name="phone">{{old('phone')}}</textarea>
+      <textarea required class="form-control" rows="3" id="phone" name="phone" placeholder="Telefonszám">{{old('phone')}}</textarea>
+      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+      <div class="help-block with-errors"></div>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group has-feedback">
     <label for="category_id" class="col-lg-2 control-label">Kategória</label>
     <div class="col-lg-10">
       <select class="form-control" id="category_id" name="category_id">
+      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+      <div class="help-block with-errors"></div>
         {% for category in categories %}
         <option value="{{ category.id }}"
           {% if category.id == old('category_id') %}
@@ -64,7 +80,7 @@
       </select>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group has-feedback">
     <div class="col-lg-10 col-lg-offset-2">
       <button type="reset" class="btn btn-default">Mégsem</button>
       <button type="submit" class="btn btn-primary">Küldés</button>

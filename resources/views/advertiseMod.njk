@@ -1,4 +1,9 @@
 {% extends "belepett" %}
+ 
+ {% block scripts %}
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+ <script src="/scripts/smartPrice.js"></script>
+ {% endblock %}
 
 {% block content %}
 <h2>Hirdetés módosítása</h2>
@@ -71,5 +76,4 @@
     </div>
   </div>
 </form>
-
 {% endblock %}

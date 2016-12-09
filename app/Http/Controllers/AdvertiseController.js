@@ -199,6 +199,12 @@ class AdvertiseController{
         yield advertise.delete()
         response.redirect('/belepett')
     }
+
+    * ajaxDelete(request, response) {
+
+            response.notFound('No advertise')
+    }
+            
 }
 
 module.exports = AdvertiseController
