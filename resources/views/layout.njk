@@ -8,7 +8,8 @@
     <title>Bootstrap 101 Template</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet">
-    {% block styles %}{% endblock %}
+    {% block styles %}
+    {% endblock %}
   </head>
   <body>
     <div id="navbar">
@@ -28,7 +29,7 @@
           <ul class="nav navbar-nav">
             <li><a href="fo">Főoldal <span class="sr-only">(current)</span></a></li>
             <li><a href="/belep" id="btnLogin">Belépés</a></li> 
-            <li><a href="reg">Regisztráció</a></li>
+            <li><a href="reg" id="btnReg">Regisztráció</a></li>
              <li><a href="search">Böngészés</a></li>
           </ul>
       </div>

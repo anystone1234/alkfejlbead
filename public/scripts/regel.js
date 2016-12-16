@@ -1,4 +1,4 @@
-$('#btnLogin').on('click', function (e) {
+$('#btnReg').on('click', function (e) {
   e.preventDefault()
 
   let $modal = $('.modal')
@@ -9,10 +9,10 @@ $('#btnLogin').on('click', function (e) {
     return
   } else {
     $modal = $(`
-      <div class="modal fade confirm-modal" tabindex="-1" role="dialog" id="loginModal">
+      <div class="modal fade confirm-modal" tabindex="-1" role="dialog" id="regModal">
         <div class="modal-dialog modal-md" role="document">
           <div class="modal-content">
-            <div class="modal-header">Belépés</div>
+            <div class="modal-header">Regisztrációó</div>
             <div class="modal-body">
               <div class="alert alert-danger"></div>
               <div class="form-area"></div>
@@ -25,7 +25,7 @@ $('#btnLogin').on('click', function (e) {
     const $formContainer = $modal.find('.form-area')
     const $errorContainer = $modal.find('.alert').hide()
 
-    $formContainer.load('/belep form', function() {
+    $formContainer.load('/reg form', function() {
       $modal.modal('show')
       const $loginForm = $modal.find('form')
       $loginForm.on('submit', function (e) {
@@ -34,7 +34,7 @@ $('#btnLogin').on('click', function (e) {
         const data = $(this).serializeArray()
         Promise.resolve(
           $.ajax({
-            url: '/ajax/belep',
+            url: '/ajax/reg',
             method: 'POST',
             data,
             dataType: 'json',

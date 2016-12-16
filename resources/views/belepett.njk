@@ -8,9 +8,11 @@
     <title>Bootstrap 101 Template</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet">
-    {% block styles %}{% endblock %}
+    {% block styles %}
+    {% endblock %}
   </head>
   <body>
+    <div id="navbar">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -32,6 +34,7 @@
           </ul>
       </div>
     </nav>
+    </div>
 
     <div class="container">
         {% block content %}{% endblock %}      

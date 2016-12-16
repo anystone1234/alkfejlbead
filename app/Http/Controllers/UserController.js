@@ -77,19 +77,46 @@ class UserController {
     }
 
     * ajaxLogin(request, response) {
-        const email = request.input('email')
+        const email = request.input('username')
         const password = request.input('password')
-
         try {
             const login = yield request.auth.attempt(email, password) 
             if (login) {
                 response.send({ success: true })
                 return
             }
-        }catch (err) {s
+        }catch (err) {
             response.send({ success: false })
         }
     }
+
+    *ajaxReg(request, response){
+        const regData = request.except('_csrf');
+        const rules = {
+            username: 'required|alpha_numeric|unique:users',
+            email: 'required|email|unique:users',
+            password: 'required|min:4',
+            password_confirm: 'required|same:password',
+        };
+
+        const validation = yield Validator.validateAll(regData, rules)
+        if (validation.fails()) {
+            yield request
+                .withAll()
+                .andWith({errors: validation.messages()})
+                .flash()
+            response.send({ success: false })
+        }
+
+        const user = new User()
+        user.username = regData.username;
+        user.email = regData.email;
+        user.password = yield Hash.make(regData.password) 
+        yield user.save()
+        yield request.auth.login(user)
+        response.send({ success: true })
+    }
+
 }
 
 module.exports = UserController

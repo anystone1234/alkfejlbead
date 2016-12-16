@@ -33,13 +33,13 @@ function my_confirm(str) {
 
 $('#btnDelete').on('click', function (e) {
   e.preventDefault()
-  my_confirm('Biztosan törlöd a hirdetést?')
-    .then(response => {
+  my_confirm('Biztosan törlöd a hirdetést?').then(response => {
       if (response) {
         const url = '/ajax' + $(this).attr('href');
+        console.log(url);
         ajaxDelete(url)
           .then(data => {
-            location.assign('/')
+            location.assign('/belepett')
           })
           .catch(xhr => {
             $('.help-block').text(xhr.responseText)

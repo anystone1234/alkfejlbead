@@ -98,10 +98,10 @@ class AdvertiseController{
         const users = yield User.all()
 
         yield response.sendView('belepAdvertiseSearch', {
-        advertises: advertises.toJSON(),
-        categories: categories.toJSON(),
-        users: users.toJSON(),
-        filters
+            advertises: advertises.toJSON(),
+            categories: categories.toJSON(),
+            users: users.toJSON(),
+            filters
         })
     }
 
@@ -201,8 +201,29 @@ class AdvertiseController{
     }
 
     * ajaxDelete(request, response) {
+        const id = request.param('id');
+        const advertise = yield Advertise.find(id);
 
-            response.notFound('No advertise')
+        if (request.currentUser.id !== advertise.user_id) {
+            response.unauthorized('Access denied.')
+            return
+        }
+        yield advertise.delete()
+        response.ok({success:true});
+    }
+
+    *ajaxSearch(request,response){
+        const page = Math.max(1, request.input('p'))
+        const filters = {
+            advertiseName: request.input('advertiseName')
+        }
+
+        const advertises = yield Advertise.query()
+        .where(function () {
+            if (filters.category > 0) this.where('category_id', filters.category)
+        })
+
+        response.ok({success:true});
     }
             
 }

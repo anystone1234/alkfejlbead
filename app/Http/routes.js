@@ -44,6 +44,11 @@ Route.get('/belepett/advertises/:id', 'AdvertiseController.show1')
 Route.get('/belepett/advertises/exit', 'UserController.exit')
 
 Route.group('ajax', function () {
-  Route.delete('/belepett/:id/delete', 'AdvertiseController.ajaxDelete').middleware('auth')
+  Route.delete('/belepett/advertises/:id/delete', 'AdvertiseController.ajaxDelete').middleware('auth')
   Route.post('/belep', 'UserController.ajaxLogin')
+  Route.post('/advertises/belep', 'UserController.ajaxLogin')
+  Route.post('/fo/belep', 'UserController.ajaxLogin')
+  Route.post('/fo/reg', 'UserController.ajaxReg')
+  Route.post('/reg', 'UserController.ajaxReg')
+  Route.post('/advertises/reg', 'UserController.ajaxReg')
 }).prefix('/ajax')

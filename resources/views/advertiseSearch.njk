@@ -1,16 +1,25 @@
 {% extends 'layout' %}
 
 {% block scripts %}
+<script src="/scripts/index.js"></script>
+<script src="/scripts/javaslat.js"></script>
 <script src="/scripts/popup.js"></script>
+<script src="/scripts/regel.js"></script>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/main.css">
 {% endblock %}
 
 {% block title %}Hirdetések böngészése{% endblock %}
 {% block content %}
   <h1>Hirdetések böngészése</h1>
-  <form action="/search" method="GET">
+  <form action="/search" method="GET" style="position: relative;">
+    
     <div class="row">
       <div class="col-md-3">
-        <div class="form-group">
+        {{ csrfField | safe }}
+        <div class="form-group search-box">
           <label for="inputName">Hirdetés neve</label>
           <input type="text" class="form-control" placeholder="Hirdetés neve" id="inputName" name="advertiseName" value="{{ filters.advertiseName }}">
         </div>
