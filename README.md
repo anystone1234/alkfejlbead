@@ -141,4 +141,83 @@ Az alábbi ábra azt a folyamatot reprezentálja, mikor a már regisztrált felh
 ####**2.3.2. Adatbázisterv**
 ![](kepek/adatbazis.png)
 
+# 3. Beadandó - 3. A szerveroldali alkalmazás progresszív fejlesztése kliensoldali JavaScript segítségével
+---
+###**3. Implementáció**
 
+####**3.1. Szekvenciadiagram**
+
+![](kepek/szekvencia.png)
+
+####**3.2. Könyvtárstruktúrában lévő mappák funkciójának bemutatása**
++ app->Http : Ajax-os funkciókhoz szükséges kiegészítések
+  * routes.js :  további szükséges végpontok felvétele
++ app->Http->Controllers
+  * AdvertiseController.js : 
+    * ajaxDelete : a hirdetés Ajax-os törlését végzi
+  * UserController.js : 
+    * ajaxLogin : belépés Ajax-szal
+    * ajaxReg : regisztrálás Ajax-szal
++ public->scripts : az 5 funkcióhoz szükséges kiegészítések
+  * delete.js : Ajax-os törlés biztosítása
+  * index.js
+    * a kategóriák sávjára kattintás hatására összecsukódik az alatta található lista
+    * a kategória neve mellett zárójelben megjelenik, hogy hány hirdetés található az adott kategóriában
+  * popup.js : bejelentkező felület felugró ablakkal való megvalósítása
+  * regel.js : regisztrációs felület felugró ablakkal való megvalósítása
+
++ resources->views : kliensoldali funkciók működéséhez szükséges kiegészítések
+Az alábbi fájlok módosításai a fenti scriptek importálásában változtak.
+Ezen kívül az űrlapok küldés gombja le van tiltv addig, amíg a felhasználó ki nem töltötte az összes olyan mezőt, ami a fejlesztő által kötelezően kitöltendő kategóriában van meghatározva.
+  * advertiseMod.njk 
+  * advertiseSearch.njk
+  * advertiseShow.njk
+  * layout.njk
+  * main.njk
+  * newAdvertise.njk
+  * reg.njk
+
+###**4. Tesztelés**
+
+Maga a tesztelés az órán is használt Selinium IDE-val történt.
+A teszteléshez tartozó mentett fájlok a *test* nevű mappában találhatók.
+A tesztelés során az alapvető funkciók lettek ellenőrizve.
+
+*
+*
+*
+*
+
+###**5. Felhasználó dokumentáció**
+
+####**5.1. A futtatáshoz ajánlott hardver-, szoftver konfiguráció**
++ **Futtatáshoz szükséges operációs rendszer:** Tetszőlegesen bármilyen operációs rendszer használható
++ **A futtastáshoz szükséges hardver:** Az operációs rendszerek szerint van megadva
++ **Egyéb:** Internetes böngésző, JavaScript, illetve az alkalmazás által használt össze kiegészítőket tartalmazó fájlok telepítése ajánlott
+
+####**5.2. Telepítés lépései: hogyan kerül a Githubról a célgépre a program, hogyan kell elindítani**
++ **1. lépés**
+Egy konzol, azaz Parancssor nyitása a gépen
++ **2. lépés**
+*git clone https://github.com/anystone1234/alkfejlbead* parancs kiadása
++ **3. lépés**
+*npm run dev* parancs kiadása
++ **4. lépés**
+Böngészőben *localhost:3333/fo* megnyitása
+
+####**5.3. A program használata**
+
+Az előző pontban leírt lépések után egyből a Főoldalon áll a felhasználó.
+
++ Itt rá lehet kattintani a kilistázott hirdetésekre. Ha a kategória sávjára kattint a felhasználó, akkor az alatta található lista összecsukódik. Ez újabb kattintás hatására jelenik meg újra.
+
++ A Böngészés feliratra kattintva pontosan lehet hirdetést keresni. Meg lehet adni a hirdetés nevét, kategóriáját vagy a felhasználók nevét, mint keresési paramétert. A Szűrés gombra kattintva fog megtörténni maga a keresés.
+Ezután a találatok száma és maguk a találatok is meg fognak jelenni a kereső sáv alatt.
+
++ A Regisztráció lehetőségre kattintva lehet beregisztrálni az oldalra. A felhasználónak meg kell adnia egy felhasználónevet, e-mail címet, egy jelszót, amit természetesen biztonsági okoból meg kell erősítenie.
+Ha az illető már regisztrálva van, akkor elegendő a Belépés opcióra kattintani, ahol az e-mail cím és jelszó páros megadásával tud belépni az oldalra.
+
++ Belépés után az Új hirdetés menüpontra kattintva tud a regisztrált felhasználó saját hirdetést létrehozni. A szükséges adatok megadása után a Küldés gombbal tudja véglegesíteni a hirdetését.
+Későbbiekben a már létrehozott hirdetésre kattintva az alul található Módosít gombbal tudja módosítani, illetve a Töröl gombbal tudja törölni azt.
+
++ A Kilépés lehetőséggel tud a bejelentkezett felhasználó kijelentkezni.
