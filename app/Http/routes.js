@@ -35,8 +35,8 @@ Route.get('/advertises/exit', 'UserController.exit')
 
 Route.get('/belepett/uj', 'AdvertiseController.uj').middleware('auth')
 Route.post('belepett/uj', 'AdvertiseController.letrehoz').middleware('auth')
-Route.get('/belepett/:id/mod', 'AdvertiseController.mod').middleware('auth')
-Route.post('/belepett/:id/mod', 'AdvertiseController.modosit').middleware('auth')
+Route.get('/belepett/advertises/:id/mod', 'AdvertiseController.mod').middleware('auth')
+Route.post('/belepett/advertises/:id/mod', 'AdvertiseController.modosit').middleware('auth')
 Route.get('/belepett/:id/delete', 'AdvertiseController.torol').middleware('auth')
 Route.get('/belepett/exit', 'UserController.exit')
 
