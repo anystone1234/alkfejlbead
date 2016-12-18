@@ -183,10 +183,13 @@ Maga a tesztelés az órán is használt Selinium IDE-val történt.
 A teszteléshez tartozó mentett fájlok a *test* nevű mappában találhatók.
 A tesztelés során az alapvető funkciók lettek ellenőrizve.
 
-*
-*
-*
-*
+* Regisztráció : *regel.html*
+* Új hirdetés felvétele : *ujHirdetes.html*
+* Új hirdetés validálással: *ujHirdetes_validalas.html*
+* Hirdetés törlése : *hirdetesTorol.html*
+* Böngészés különböző feltételek alapján: *kereses.html*
+* Kategóriák összecsukód sávja és oldalak átirányításai: *atiranyitasokEsCsukodosavok.html*
+
 
 ###**5. Felhasználó dokumentáció**
 

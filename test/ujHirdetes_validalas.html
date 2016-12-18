@@ -4,27 +4,37 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost:3333/" />
-<title>ujHirdetes</title>
+<title>ujHirdetes_validalas</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">ujHirdetes</td></tr>
+<tr><td rowspan="1" colspan="3">ujHirdetes_validalas</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>belepett/uj</td>
+	<td>/belepett</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=name</td>
-	<td>Tesztelés</td>
+	<td>clickAndWait</td>
+	<td>link=Új hirdetés</td>
+	<td></td>
 </tr>
 <tr>
-	<td>type</td>
+	<td>verifyText</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
 	<td>id=describing</td>
-	<td>Teszteljünk</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
@@ -32,14 +42,19 @@
 	<td>500 ft</td>
 </tr>
 <tr>
+	<td>assertText</td>
+	<td>id=email</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=email</td>
-	<td>teszt@elek.hu</td>
+	<td>asd@fgt.hu</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=phone</td>
-	<td>1234567</td>
+	<td>23563</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -47,13 +62,23 @@
 	<td>label=Reál órák</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>css=button.btn.btn-primary</td>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
 <tr>
-	<td>open</td>
-	<td>/belepett</td>
+	<td>type</td>
+	<td>id=name</td>
+	<td>asd</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=describing</td>
+	<td>asd</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-primary</td>
 	<td></td>
 </tr>
 
