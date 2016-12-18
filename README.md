@@ -146,6 +146,7 @@ Az alábbi ábra azt a folyamatot reprezentálja, mikor a már regisztrált felh
 ###**3. Implementáció**
 
 ####**3.1. Szekvenciadiagram**
+Az alábbi ábrán láthatóak az oldalon található folyamatok.
 
 ![](kepek/szekvencia.png)
 
